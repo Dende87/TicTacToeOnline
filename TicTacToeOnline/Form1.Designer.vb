@@ -24,19 +24,15 @@ Partial Class frmMain
     Private Sub InitializeComponent()
         Me.cmdNewGame = New System.Windows.Forms.Button()
         Me.pnlGameField = New System.Windows.Forms.Panel()
-        Me.Button9 = New System.Windows.Forms.Button()
-        Me.Button6 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button8 = New System.Windows.Forms.Button()
-        Me.Button5 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button7 = New System.Windows.Forms.Button()
-        Me.Button4 = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.UctlLine2 = New TicTacToeOnline.uctlLine()
-        Me.UctlLine4 = New TicTacToeOnline.uctlLine()
-        Me.UctlLine3 = New TicTacToeOnline.uctlLine()
-        Me.UctlLine1 = New TicTacToeOnline.uctlLine()
+        Me.cmdA3 = New System.Windows.Forms.Button()
+        Me.cmdA2 = New System.Windows.Forms.Button()
+        Me.cmdA1 = New System.Windows.Forms.Button()
+        Me.cmdB3 = New System.Windows.Forms.Button()
+        Me.cmdB2 = New System.Windows.Forms.Button()
+        Me.cmdB1 = New System.Windows.Forms.Button()
+        Me.cmdC3 = New System.Windows.Forms.Button()
+        Me.cmdC2 = New System.Windows.Forms.Button()
+        Me.cmdC1 = New System.Windows.Forms.Button()
         Me.lblTurn = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -44,6 +40,11 @@ Partial Class frmMain
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
+        Me.lblWinner = New System.Windows.Forms.Label()
+        Me.UctlLine2 = New TicTacToeOnline.uctlLine()
+        Me.UctlLine4 = New TicTacToeOnline.uctlLine()
+        Me.UctlLine3 = New TicTacToeOnline.uctlLine()
+        Me.UctlLine1 = New TicTacToeOnline.uctlLine()
         Me.pnlGameField.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -59,15 +60,15 @@ Partial Class frmMain
         'pnlGameField
         '
         Me.pnlGameField.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.pnlGameField.Controls.Add(Me.Button9)
-        Me.pnlGameField.Controls.Add(Me.Button6)
-        Me.pnlGameField.Controls.Add(Me.Button3)
-        Me.pnlGameField.Controls.Add(Me.Button8)
-        Me.pnlGameField.Controls.Add(Me.Button5)
-        Me.pnlGameField.Controls.Add(Me.Button2)
-        Me.pnlGameField.Controls.Add(Me.Button7)
-        Me.pnlGameField.Controls.Add(Me.Button4)
-        Me.pnlGameField.Controls.Add(Me.Button1)
+        Me.pnlGameField.Controls.Add(Me.cmdA3)
+        Me.pnlGameField.Controls.Add(Me.cmdA2)
+        Me.pnlGameField.Controls.Add(Me.cmdA1)
+        Me.pnlGameField.Controls.Add(Me.cmdB3)
+        Me.pnlGameField.Controls.Add(Me.cmdB2)
+        Me.pnlGameField.Controls.Add(Me.cmdB1)
+        Me.pnlGameField.Controls.Add(Me.cmdC3)
+        Me.pnlGameField.Controls.Add(Me.cmdC2)
+        Me.pnlGameField.Controls.Add(Me.cmdC1)
         Me.pnlGameField.Controls.Add(Me.UctlLine2)
         Me.pnlGameField.Controls.Add(Me.UctlLine4)
         Me.pnlGameField.Controls.Add(Me.UctlLine3)
@@ -77,123 +78,94 @@ Partial Class frmMain
         Me.pnlGameField.Size = New System.Drawing.Size(300, 300)
         Me.pnlGameField.TabIndex = 1
         '
-        'Button9
+        'cmdA3
         '
-        Me.Button9.Font = New System.Drawing.Font("Trebuchet MS", 26.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button9.Location = New System.Drawing.Point(3, 209)
-        Me.Button9.Name = "Button9"
-        Me.Button9.Size = New System.Drawing.Size(79, 86)
-        Me.Button9.TabIndex = 1
-        Me.Button9.UseVisualStyleBackColor = True
+        Me.cmdA3.Font = New System.Drawing.Font("Trebuchet MS", 26.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmdA3.Location = New System.Drawing.Point(3, 209)
+        Me.cmdA3.Name = "cmdA3"
+        Me.cmdA3.Size = New System.Drawing.Size(79, 86)
+        Me.cmdA3.TabIndex = 1
+        Me.cmdA3.UseVisualStyleBackColor = True
         '
-        'Button6
+        'cmdA2
         '
-        Me.Button6.Font = New System.Drawing.Font("Trebuchet MS", 26.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button6.Location = New System.Drawing.Point(3, 102)
-        Me.Button6.Name = "Button6"
-        Me.Button6.Size = New System.Drawing.Size(79, 90)
-        Me.Button6.TabIndex = 1
-        Me.Button6.UseVisualStyleBackColor = True
+        Me.cmdA2.Font = New System.Drawing.Font("Trebuchet MS", 26.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmdA2.Location = New System.Drawing.Point(3, 102)
+        Me.cmdA2.Name = "cmdA2"
+        Me.cmdA2.Size = New System.Drawing.Size(79, 90)
+        Me.cmdA2.TabIndex = 1
+        Me.cmdA2.UseVisualStyleBackColor = True
         '
-        'Button3
+        'cmdA1
         '
-        Me.Button3.Font = New System.Drawing.Font("Trebuchet MS", 26.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button3.Location = New System.Drawing.Point(3, 3)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(79, 82)
-        Me.Button3.TabIndex = 1
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.cmdA1.Font = New System.Drawing.Font("Trebuchet MS", 26.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmdA1.Location = New System.Drawing.Point(3, 3)
+        Me.cmdA1.Name = "cmdA1"
+        Me.cmdA1.Size = New System.Drawing.Size(79, 82)
+        Me.cmdA1.TabIndex = 1
+        Me.cmdA1.UseVisualStyleBackColor = True
         '
-        'Button8
+        'cmdB3
         '
-        Me.Button8.Font = New System.Drawing.Font("Trebuchet MS", 26.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button8.Location = New System.Drawing.Point(99, 209)
-        Me.Button8.Name = "Button8"
-        Me.Button8.Size = New System.Drawing.Size(93, 86)
-        Me.Button8.TabIndex = 1
-        Me.Button8.UseVisualStyleBackColor = True
+        Me.cmdB3.Font = New System.Drawing.Font("Trebuchet MS", 26.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmdB3.Location = New System.Drawing.Point(99, 209)
+        Me.cmdB3.Name = "cmdB3"
+        Me.cmdB3.Size = New System.Drawing.Size(93, 86)
+        Me.cmdB3.TabIndex = 1
+        Me.cmdB3.UseVisualStyleBackColor = True
         '
-        'Button5
+        'cmdB2
         '
-        Me.Button5.Font = New System.Drawing.Font("Trebuchet MS", 26.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button5.Location = New System.Drawing.Point(99, 102)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(93, 90)
-        Me.Button5.TabIndex = 1
-        Me.Button5.UseVisualStyleBackColor = True
+        Me.cmdB2.Font = New System.Drawing.Font("Trebuchet MS", 26.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmdB2.Location = New System.Drawing.Point(99, 102)
+        Me.cmdB2.Name = "cmdB2"
+        Me.cmdB2.Size = New System.Drawing.Size(93, 90)
+        Me.cmdB2.TabIndex = 1
+        Me.cmdB2.UseVisualStyleBackColor = True
         '
-        'Button2
+        'cmdB1
         '
-        Me.Button2.Font = New System.Drawing.Font("Trebuchet MS", 26.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.Location = New System.Drawing.Point(99, 3)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(93, 82)
-        Me.Button2.TabIndex = 1
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.cmdB1.Font = New System.Drawing.Font("Trebuchet MS", 26.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmdB1.Location = New System.Drawing.Point(99, 3)
+        Me.cmdB1.Name = "cmdB1"
+        Me.cmdB1.Size = New System.Drawing.Size(93, 82)
+        Me.cmdB1.TabIndex = 1
+        Me.cmdB1.UseVisualStyleBackColor = True
         '
-        'Button7
+        'cmdC3
         '
-        Me.Button7.Font = New System.Drawing.Font("Trebuchet MS", 26.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button7.Location = New System.Drawing.Point(209, 209)
-        Me.Button7.Name = "Button7"
-        Me.Button7.Size = New System.Drawing.Size(86, 86)
-        Me.Button7.TabIndex = 1
-        Me.Button7.UseVisualStyleBackColor = True
+        Me.cmdC3.Font = New System.Drawing.Font("Trebuchet MS", 26.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmdC3.Location = New System.Drawing.Point(209, 209)
+        Me.cmdC3.Name = "cmdC3"
+        Me.cmdC3.Size = New System.Drawing.Size(86, 86)
+        Me.cmdC3.TabIndex = 1
+        Me.cmdC3.UseVisualStyleBackColor = True
         '
-        'Button4
+        'cmdC2
         '
-        Me.Button4.Font = New System.Drawing.Font("Trebuchet MS", 26.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button4.Location = New System.Drawing.Point(209, 102)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(86, 90)
-        Me.Button4.TabIndex = 1
-        Me.Button4.UseVisualStyleBackColor = True
+        Me.cmdC2.Font = New System.Drawing.Font("Trebuchet MS", 26.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmdC2.Location = New System.Drawing.Point(209, 102)
+        Me.cmdC2.Name = "cmdC2"
+        Me.cmdC2.Size = New System.Drawing.Size(86, 90)
+        Me.cmdC2.TabIndex = 1
+        Me.cmdC2.UseVisualStyleBackColor = True
         '
-        'Button1
+        'cmdC1
         '
-        Me.Button1.Font = New System.Drawing.Font("Trebuchet MS", 26.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(209, 3)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(86, 82)
-        Me.Button1.TabIndex = 1
-        Me.Button1.UseVisualStyleBackColor = True
-        '
-        'UctlLine2
-        '
-        Me.UctlLine2.Location = New System.Drawing.Point(-1, 198)
-        Me.UctlLine2.Name = "UctlLine2"
-        Me.UctlLine2.Size = New System.Drawing.Size(300, 5)
-        Me.UctlLine2.TabIndex = 0
-        '
-        'UctlLine4
-        '
-        Me.UctlLine4.Location = New System.Drawing.Point(198, -1)
-        Me.UctlLine4.Name = "UctlLine4"
-        Me.UctlLine4.Size = New System.Drawing.Size(5, 300)
-        Me.UctlLine4.TabIndex = 0
-        '
-        'UctlLine3
-        '
-        Me.UctlLine3.Location = New System.Drawing.Point(88, -1)
-        Me.UctlLine3.Name = "UctlLine3"
-        Me.UctlLine3.Size = New System.Drawing.Size(5, 300)
-        Me.UctlLine3.TabIndex = 0
-        '
-        'UctlLine1
-        '
-        Me.UctlLine1.Location = New System.Drawing.Point(-1, 91)
-        Me.UctlLine1.Name = "UctlLine1"
-        Me.UctlLine1.Size = New System.Drawing.Size(300, 5)
-        Me.UctlLine1.TabIndex = 0
+        Me.cmdC1.Font = New System.Drawing.Font("Trebuchet MS", 26.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmdC1.Location = New System.Drawing.Point(209, 3)
+        Me.cmdC1.Name = "cmdC1"
+        Me.cmdC1.Size = New System.Drawing.Size(86, 82)
+        Me.cmdC1.TabIndex = 1
+        Me.cmdC1.UseVisualStyleBackColor = True
         '
         'lblTurn
         '
         Me.lblTurn.AutoSize = True
         Me.lblTurn.Location = New System.Drawing.Point(380, 111)
         Me.lblTurn.Name = "lblTurn"
-        Me.lblTurn.Size = New System.Drawing.Size(57, 13)
+        Me.lblTurn.Size = New System.Drawing.Size(0, 13)
         Me.lblTurn.TabIndex = 2
-        Me.lblTurn.Text = "O fängt an"
         '
         'Label1
         '
@@ -249,11 +221,48 @@ Partial Class frmMain
         Me.Label6.TabIndex = 2
         Me.Label6.Text = "3"
         '
+        'lblWinner
+        '
+        Me.lblWinner.AutoSize = True
+        Me.lblWinner.Location = New System.Drawing.Point(380, 137)
+        Me.lblWinner.Name = "lblWinner"
+        Me.lblWinner.Size = New System.Drawing.Size(0, 13)
+        Me.lblWinner.TabIndex = 3
+        '
+        'UctlLine2
+        '
+        Me.UctlLine2.Location = New System.Drawing.Point(-1, 198)
+        Me.UctlLine2.Name = "UctlLine2"
+        Me.UctlLine2.Size = New System.Drawing.Size(300, 5)
+        Me.UctlLine2.TabIndex = 0
+        '
+        'UctlLine4
+        '
+        Me.UctlLine4.Location = New System.Drawing.Point(198, -1)
+        Me.UctlLine4.Name = "UctlLine4"
+        Me.UctlLine4.Size = New System.Drawing.Size(5, 300)
+        Me.UctlLine4.TabIndex = 0
+        '
+        'UctlLine3
+        '
+        Me.UctlLine3.Location = New System.Drawing.Point(88, -1)
+        Me.UctlLine3.Name = "UctlLine3"
+        Me.UctlLine3.Size = New System.Drawing.Size(5, 300)
+        Me.UctlLine3.TabIndex = 0
+        '
+        'UctlLine1
+        '
+        Me.UctlLine1.Location = New System.Drawing.Point(-1, 91)
+        Me.UctlLine1.Name = "UctlLine1"
+        Me.UctlLine1.Size = New System.Drawing.Size(300, 5)
+        Me.UctlLine1.TabIndex = 0
+        '
         'frmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(538, 429)
+        Me.Controls.Add(Me.lblWinner)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label6)
@@ -279,15 +288,15 @@ Partial Class frmMain
     Friend WithEvents UctlLine2 As TicTacToeOnline.uctlLine
     Friend WithEvents UctlLine4 As TicTacToeOnline.uctlLine
     Friend WithEvents UctlLine3 As TicTacToeOnline.uctlLine
-    Friend WithEvents Button9 As System.Windows.Forms.Button
-    Friend WithEvents Button6 As System.Windows.Forms.Button
-    Friend WithEvents Button3 As System.Windows.Forms.Button
-    Friend WithEvents Button8 As System.Windows.Forms.Button
-    Friend WithEvents Button5 As System.Windows.Forms.Button
-    Friend WithEvents Button2 As System.Windows.Forms.Button
-    Friend WithEvents Button7 As System.Windows.Forms.Button
-    Friend WithEvents Button1 As System.Windows.Forms.Button
-    Friend WithEvents Button4 As System.Windows.Forms.Button
+    Friend WithEvents cmdA3 As System.Windows.Forms.Button
+    Friend WithEvents cmdA2 As System.Windows.Forms.Button
+    Friend WithEvents cmdA1 As System.Windows.Forms.Button
+    Friend WithEvents cmdB3 As System.Windows.Forms.Button
+    Friend WithEvents cmdB2 As System.Windows.Forms.Button
+    Friend WithEvents cmdB1 As System.Windows.Forms.Button
+    Friend WithEvents cmdC3 As System.Windows.Forms.Button
+    Friend WithEvents cmdC1 As System.Windows.Forms.Button
+    Friend WithEvents cmdC2 As System.Windows.Forms.Button
     Friend WithEvents lblTurn As System.Windows.Forms.Label
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents Label2 As System.Windows.Forms.Label
@@ -295,5 +304,6 @@ Partial Class frmMain
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents Label6 As System.Windows.Forms.Label
+    Friend WithEvents lblWinner As System.Windows.Forms.Label
 
 End Class

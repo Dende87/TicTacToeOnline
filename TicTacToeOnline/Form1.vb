@@ -1,7 +1,5 @@
 ﻿Public Class frmMain
 
-    Private mobjPen As New System.Drawing.Pen(Brushes.Black, 3)
-    Private mobjGraphic As System.Drawing.Graphics
     Private mintPlayer As enumTurn
     Private mstrPlayer As String
 
@@ -10,11 +8,40 @@
         ' Dieser Aufruf ist für den Designer erforderlich.
         InitializeComponent()
 
-        ' Fügen Sie Initialisierungen nach dem InitializeComponent()-Aufruf hinzu.
     End Sub
 
     Private Sub cmdNewGame_Click(sender As Object, e As EventArgs) Handles cmdNewGame.Click
         mintPlayer = enumTurn.TurnO
+        lblTurn.Text = "O ist dran"
+
+        lblWinner.Text = ""
+
+        cmdC1.Enabled = True
+        cmdC1.Text = ""
+
+        cmdB1.Enabled = True
+        cmdB1.Text = ""
+
+        cmdA1.Enabled = True
+        cmdA1.Text = ""
+
+        cmdC2.Enabled = True
+        cmdC2.Text = ""
+
+        cmdB2.Enabled = True
+        cmdB2.Text = ""
+
+        cmdA2.Enabled = True
+        cmdA2.Text = ""
+
+        cmdC3.Enabled = True
+        cmdC3.Text = ""
+
+        cmdB3.Enabled = True
+        cmdB3.Text = ""
+
+        cmdA3.Enabled = True
+        cmdA3.Text = ""
     End Sub
 
     Private Sub Playerturn()
@@ -31,77 +58,167 @@
 
     End Sub
 
-    Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
+    Private Sub Button7_Click(sender As Object, e As EventArgs) Handles cmdC3.Click
         Try
             Playerturn()
-            Button7.Text = mstrPlayer
+            cmdC3.Text = mstrPlayer
+            cmdC3.Enabled = False
+
+            CheckWin()
+
         Catch ex As Exception
             MessageBox.Show(ex.ToString)
         End Try
     End Sub
-    Private Sub Button8_Click(sender As Object, e As EventArgs) Handles Button8.Click
+    Private Sub Button8_Click(sender As Object, e As EventArgs) Handles cmdB3.Click
         Try
             Playerturn()
-            Button8.Text = mstrPlayer
+            cmdB3.Text = mstrPlayer
+            cmdB3.Enabled = False
+
+            CheckWin()
+
         Catch ex As Exception
             MessageBox.Show(ex.ToString)
         End Try
     End Sub
-    Private Sub Button9_Click(sender As Object, e As EventArgs) Handles Button9.Click
+    Private Sub Button9_Click(sender As Object, e As EventArgs) Handles cmdA3.Click
         Try
             Playerturn()
-            Button9.Text = mstrPlayer
+            cmdA3.Text = mstrPlayer
+            cmdA3.Enabled = False
+            CheckWin()
         Catch ex As Exception
             MessageBox.Show(ex.ToString)
         End Try
     End Sub
-    Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
+    Private Sub Button6_Click(sender As Object, e As EventArgs) Handles cmdA2.Click
         Try
             Playerturn()
-            Button6.Text = mstrPlayer
+            cmdA2.Text = mstrPlayer
+            cmdA2.Enabled = False
+            CheckWin()
         Catch ex As Exception
             MessageBox.Show(ex.ToString)
         End Try
     End Sub
-    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
+    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles cmdB2.Click
         Try
             Playerturn()
-            Button5.Text = mstrPlayer
+            cmdB2.Text = mstrPlayer
+            cmdB2.Enabled = False
+            CheckWin()
         Catch ex As Exception
             MessageBox.Show(ex.ToString)
         End Try
     End Sub
-    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles cmdA1.Click
         Try
             Playerturn()
-            Button3.Text = mstrPlayer
+            cmdA1.Text = mstrPlayer
+            cmdA1.Enabled = False
+            CheckWin()
         Catch ex As Exception
             MessageBox.Show(ex.ToString)
         End Try
     End Sub
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles cmdC1.Click
         Try
             Playerturn()
-            Button1.Text = mstrPlayer
+            cmdC1.Text = mstrPlayer
+            cmdC1.Enabled = False
+            CheckWin()
         Catch ex As Exception
             MessageBox.Show(ex.ToString)
         End Try
     End Sub
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles cmdB1.Click
         Try
             Playerturn()
-            Button2.Text = mstrPlayer
+            cmdB1.Text = mstrPlayer
+            cmdB1.Enabled = False
+            CheckWin()
         Catch ex As Exception
             MessageBox.Show(ex.ToString)
         End Try
     End Sub
-    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles cmdC2.Click
         Try
             Playerturn()
-            Button4.Text = mstrPlayer
+            cmdC2.Text = mstrPlayer
+            cmdC2.Enabled = False
+            CheckWin()
         Catch ex As Exception
             MessageBox.Show(ex.ToString)
         End Try
+    End Sub
+
+    Private Sub CheckWin()
+
+        If cmdA1.Text.Equals("X") AndAlso cmdA2.Text.Equals("X") AndAlso cmdA3.Text.Equals("X") Then
+            lblWinner.Text = "X hat gewonnen!"
+        End If
+
+        If cmdA1.Text.Equals("X") AndAlso cmdB2.Text.Equals("X") AndAlso cmdC3.Text.Equals("X") Then
+            lblWinner.Text = "X hat gewonnen!"
+        End If
+
+        If cmdA1.Text.Equals("X") AndAlso cmdB1.Text.Equals("X") AndAlso cmdC1.Text.Equals("X") Then
+            lblWinner.Text = "X hat gewonnen!"
+        End If
+
+        If cmdB1.Text.Equals("X") AndAlso cmdB2.Text.Equals("X") AndAlso cmdB3.Text.Equals("X") Then
+            lblWinner.Text = "X hat gewonnen!"
+        End If
+
+        If cmdC1.Text.Equals("X") AndAlso cmdC2.Text.Equals("X") AndAlso cmdC3.Text.Equals("X") Then
+            lblWinner.Text = "X hat gewonnen!"
+        End If
+
+        If cmdA2.Text.Equals("X") AndAlso cmdB2.Text.Equals("X") AndAlso cmdC2.Text.Equals("X") Then
+            lblWinner.Text = "X hat gewonnen!"
+        End If
+
+        If cmdA3.Text.Equals("X") AndAlso cmdB3.Text.Equals("X") AndAlso cmdC3.Text.Equals("X") Then
+            lblWinner.Text = "X hat gewonnen!"
+        End If
+
+        If cmdA3.Text.Equals("X") AndAlso cmdB2.Text.Equals("X") AndAlso cmdC1.Text.Equals("X") Then
+            lblWinner.Text = "X hat gewonnen!"
+        End If
+
+        If cmdA1.Text.Equals("O") AndAlso cmdA2.Text.Equals("O") AndAlso cmdA3.Text.Equals("O") Then
+            lblWinner.Text = "O hat gewonnen!"
+        End If
+
+        If cmdA1.Text.Equals("O") AndAlso cmdB2.Text.Equals("O") AndAlso cmdC3.Text.Equals("O") Then
+            lblWinner.Text = "O hat gewonnen!"
+        End If
+
+        If cmdA1.Text.Equals("O") AndAlso cmdB1.Text.Equals("O") AndAlso cmdC1.Text.Equals("O") Then
+            lblWinner.Text = "O hat gewonnen!"
+        End If
+
+        If cmdB1.Text.Equals("O") AndAlso cmdB2.Text.Equals("O") AndAlso cmdB3.Text.Equals("O") Then
+            lblWinner.Text = "O hat gewonnen!"
+        End If
+
+        If cmdC1.Text.Equals("O") AndAlso cmdC2.Text.Equals("O") AndAlso cmdC3.Text.Equals("O") Then
+            lblWinner.Text = "O hat gewonnen!"
+        End If
+
+        If cmdA2.Text.Equals("O") AndAlso cmdB2.Text.Equals("O") AndAlso cmdC2.Text.Equals("O") Then
+            lblWinner.Text = "O hat gewonnen!"
+        End If
+
+        If cmdA3.Text.Equals("O") AndAlso cmdB3.Text.Equals("O") AndAlso cmdC3.Text.Equals("O") Then
+            lblWinner.Text = "O hat gewonnen!"
+        End If
+
+        If cmdA3.Text.Equals("O") AndAlso cmdB2.Text.Equals("O") AndAlso cmdC1.Text.Equals("O") Then
+            lblWinner.Text = "O hat gewonnen!"
+        End If
+
     End Sub
 
 End Class
