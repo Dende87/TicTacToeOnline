@@ -9,3 +9,4 @@ D:\Development\TicTacToe\TicTacToeOnline\TicTacToeOnline\obj\Debug\TicTacToeOnli
 D:\Development\TicTacToe\TicTacToeOnline\TicTacToeOnline\obj\Debug\TicTacToeOnline.xml
 D:\Development\TicTacToe\TicTacToeOnline\TicTacToeOnline\obj\Debug\TicTacToeOnline.pdb
 D:\Development\TicTacToe\TicTacToeOnline\TicTacToeOnline\obj\Debug\TicTacToeOnline.uctlLine.resources
+D:\Development\TicTacToe\TicTacToeOnline\TicTacToeOnline\obj\Debug\TicTacToeOnline.frmChat.resources

@@ -173,4 +173,13 @@
 
   End Sub
 
+  Private Sub cmdOpenChat_Click(sender As Object, e As EventArgs) Handles cmdOpenChat.Click
+    Try
+
+      frmChat.Show()
+
+    Catch ex As Exception
+
+    End Try
+  End Sub
 End Class

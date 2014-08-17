@@ -45,6 +45,7 @@ Partial Class frmMain
     Me.Label5 = New System.Windows.Forms.Label()
     Me.Label6 = New System.Windows.Forms.Label()
     Me.lblWinner = New System.Windows.Forms.Label()
+    Me.cmdOpenChat = New System.Windows.Forms.Button()
     Me.pnlGameField.SuspendLayout()
     Me.SuspendLayout()
     '
@@ -257,11 +258,21 @@ Partial Class frmMain
     Me.lblWinner.Size = New System.Drawing.Size(0, 13)
     Me.lblWinner.TabIndex = 3
     '
+    'cmdOpenChat
+    '
+    Me.cmdOpenChat.Location = New System.Drawing.Point(355, 322)
+    Me.cmdOpenChat.Name = "cmdOpenChat"
+    Me.cmdOpenChat.Size = New System.Drawing.Size(75, 23)
+    Me.cmdOpenChat.TabIndex = 4
+    Me.cmdOpenChat.Text = "Open Chat"
+    Me.cmdOpenChat.UseVisualStyleBackColor = True
+    '
     'frmMain
     '
     Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
     Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
     Me.ClientSize = New System.Drawing.Size(445, 396)
+    Me.Controls.Add(Me.cmdOpenChat)
     Me.Controls.Add(Me.lblWinner)
     Me.Controls.Add(Me.Label3)
     Me.Controls.Add(Me.Label2)
@@ -304,6 +315,7 @@ Partial Class frmMain
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents Label6 As System.Windows.Forms.Label
-    Friend WithEvents lblWinner As System.Windows.Forms.Label
+  Friend WithEvents lblWinner As System.Windows.Forms.Label
+  Friend WithEvents cmdOpenChat As System.Windows.Forms.Button
 
 End Class
